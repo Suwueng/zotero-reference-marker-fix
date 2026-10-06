@@ -64,6 +64,12 @@ The XPI is written to `dist/`. `updates.json` contains the release URL, exact co
 
 Tests cover crop offsets, zoom, rotation fallback, text-line selection, punctuation tails, startup/shutdown, version gating and preservation of subsequent patches. The rendering code was also exercised with a real PDF reader during development; automated tests use synthetic fixtures and do not start Zotero or open a browser.
 
+## Contributions / 贡献说明
+
+This plugin was developed by Suwueng with assistance from OpenAI’s Codex. Codex assisted with investigating the coordinate mismatch, implementing the temporary fix and visual alignment, writing and running tests, and preparing the release. Suwueng reported the issue, guided the behavior and naming, tested the plugin in daily Zotero use, and confirmed the final visual result.
+
+本插件由 Suwueng 在 OpenAI Codex 的协助下开发。Codex 协助完成坐标错位分析、临时修复与视觉对齐实现、测试编写与执行，以及发布准备。Suwueng 提出问题、确定功能和命名方向，在日常 Zotero 使用中测试插件，并确认最终显示效果。
+
 ## License and attribution
 
 [GNU Affero General Public License v3](COPYING). The preview-rendering method is adapted from [Zotero Reader](https://github.com/zotero/reader), copyright Corporation for Digital Scholarship. Local modifications correct the dot coordinates, add visual alignment and provide plugin lifecycle handling. See the included upstream copyright and license text.
