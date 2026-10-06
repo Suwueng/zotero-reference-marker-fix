@@ -2,7 +2,7 @@
 
 [English](README.md) | 简体中文
 
-面向 **Zotero 10.0.5** 的临时社区插件，修正引用悬停浮窗中参考文献标记的位置，并使其与目标条目的首行对齐。
+面向 **Zotero** 的临时社区插件，修正引用悬停浮窗中参考文献标记的位置，并使其与目标条目的首行对齐。
 
 [下载最新版](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest)
 
@@ -23,16 +23,15 @@
 - 保留整页浮窗；绘制异常时回退 Zotero 原生预览。
 - 停用时恢复原来的绘制方法。
 
-## 安装与升级
+## 安装
 
 1. 在 [Releases](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest) 下载 `.xpi` 文件。GitHub 自动生成的 Source code 压缩包不能作为插件安装。
 2. 打开 Zotero → **工具 → 插件 → 齿轮 → 从文件安装插件**。
 3. 选择 `.xpi` 文件，安装完成后重启 Zotero。
-4. 打开 PDF，将鼠标停在正文引用上查看效果。
 
 ## 兼容范围与撤销
 
-- **仅支持 Zotero 10.0.5**。目前在 macOS 上确认可用，Windows 和 Linux 尚未验证。升级 Zotero 后请检查本项目是否发布兼容版本。
+- 已在 **macOS 的 Zotero 10.0.5** 上验证。当前安装包将安装和启用范围限制在 10.0.5；其他版本及 Windows、Linux 的兼容性尚未验证。
 - 这是使用阅读器私有接口的临时社区修复。官方修复后建议停用。
 - 对齐依据局部文字的位置关系进行判断。多行参考文献以首行为准；对文字无法识别、旋转页面或不支持的排版，保留已校正的链接锚点。
 - 插件不修改 PDF、批注、文库数据库或 Zotero 程序文件。预览处理在本地完成；Zotero 的插件更新机制会访问 GitHub 更新清单。
@@ -48,19 +47,6 @@ Zotero 的内部链接预览会先裁掉页边空白，再绘制目标标记。�
 
 - [此前的相似问题反馈](https://forums.zotero.org/discussion/118062/highlights-of-cited-paper-on-consistently-wrong-place)：现象相似，但尚未确认该旧帖的问题根因。
 - [技术分析（英文）](docs/diagnosis.md)：说明裁剪坐标错误，以及与之独立的视觉对齐改进。
-
-## 开发
-
-单元测试和打包无需安装 npm 依赖：
-
-```sh
-node test.cjs
-python3 build.py
-```
-
-生成的 XPI 位于 `dist/`。`updates.json` 包含发布地址、精确兼容范围和 SHA-256 校验值。发布后续版本时，更新 `manifest.json`、构建安装包、重新生成更新条目，先发布对应安装包，再发布更新清单。
-
-测试覆盖裁剪偏移、缩放、旋转回退、文字行选择、标点尾部、启停恢复、版本限制，以及保留后续其他补丁的行为。开发期间也在真实 PDF 阅读器中验证过绘制代码；自动测试使用合成数据，不会启动 Zotero 或打开浏览器。
 
 ## 贡献说明
 
