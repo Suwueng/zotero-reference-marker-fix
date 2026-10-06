@@ -12,9 +12,22 @@ In this example, **W22** refers to **Wells & Norman (2022), ApJ, 932, 71**. The 
 
 | Original Zotero behavior | With Reference Marker Fix |
 | --- | --- |
-| [![Citation hover popup before the fix: the marker is displaced from the target reference](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png) | [![Citation hover popup after the fix: the marker is aligned beside Wells and Norman (2022)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png) |
+| [![Citation hover popup before the fix: the marker is displaced from the target reference](docs/images/reference-marker-before.png)](docs/images/reference-marker-before.png) | [![Citation hover popup after the fix: the marker is aligned beside Wells and Norman (2022)](docs/images/reference-marker-after.png)](docs/images/reference-marker-after.png) |
 
-Click either screenshot to view it at full size. The after screenshot includes both the crop-coordinate correction and the additional visual alignment. These are the screenshots used in the author's Zotero forum feedback.
+These crops show the same nearby entries from the forum screenshots. The after image includes both the crop-coordinate correction and visual alignment; the screenshot content has only been cropped.
+
+<details>
+<summary>View the full original screenshots</summary>
+
+**Before**
+
+![Full screenshot before the fix](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png)
+
+**After**
+
+![Full screenshot with the workaround](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png)
+
+</details>
 
 ## Features
 

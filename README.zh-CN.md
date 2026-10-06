@@ -12,9 +12,22 @@
 
 | Zotero 原生效果 | 使用 Reference Marker Fix 后 |
 | --- | --- |
-| [![修复前：引用悬停浮窗中的红点偏离目标参考文献](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png) | [![修复后：红点对齐 Wells 与 Norman（2022）条目](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png) |
+| [![修复前：引用悬停浮窗中的红点偏离目标参考文献](docs/images/reference-marker-before.png)](docs/images/reference-marker-before.png) | [![修复后：红点对齐 Wells 与 Norman（2022）条目](docs/images/reference-marker-after.png)](docs/images/reference-marker-after.png) |
 
-点击图片可查看原图。右图同时包含裁剪坐标修正与额外的视觉对齐改进。这两张截图也用于作者在 Zotero 官方论坛的反馈。
+以上从论坛反馈截图中裁出同一组相邻条目，突出红点位置变化。右图包含坐标修正与视觉对齐改进；截图内容仅作裁剪。
+
+<details>
+<summary>展开查看完整原始截图</summary>
+
+**修复前**
+
+![修复前完整截图](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png)
+
+**修复后**
+
+![修复后完整截图](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png)
+
+</details>
 
 ## 功能
 
