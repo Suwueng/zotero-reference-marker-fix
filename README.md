@@ -1,52 +1,42 @@
 # Reference Marker Fix
 
-A temporary community plugin for **Zotero 10.0.5** that fixes the displaced red dot in PDF internal-link previews and aligns it with the target reference's first line.
+English | [简体中文](README.zh-CN.md)
 
-[下载最新版 / Download latest release](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest)
+A temporary community plugin for **Zotero 10.0.5** that corrects misplaced reference markers in citation hover popups and aligns them with the target reference's first line.
 
-Formerly **PDF Preview Dot Fix**. The internal add-on ID is unchanged, so the new version upgrades the existing installation.
+[Download the latest release](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest)
 
-## 中文
+## Features
 
-在 Zotero 中悬停引用链接时，预览红点有时会偏到相邻参考文献。这个插件修正裁掉页边空白后遗漏的坐标偏移，并把红点放到目标条目首行左侧，按可见字母主体居中。整页预览保持不变。
-
-### 安装
-
-1. 在 [Releases](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest) 下载 `.xpi` 文件。不要下载 GitHub 自动生成的 Source code 压缩包来安装。
-2. 打开 Zotero → 工具 → 插件 → 齿轮 → 从文件安装插件。
-3. 选择 `.xpi`，完成后重启 Zotero。
-4. 打开 PDF，将鼠标停在正文引用上查看效果。
-
-原名 PDF Preview Dot Fix，现已更名为 Reference Marker Fix。内部插件 ID 保持不变，升级覆盖安装即可。早期本地版本 0.1.0–0.1.5 使用占位更新地址，需要手动安装一次公开版本；0.1.6 起配置了本仓库的更新清单。
-
-### 兼容范围与撤销
-
-- **仅支持 Zotero 10.0.5**。目前在 macOS 上确认可用，Windows/Linux 尚未验证。升级 Zotero 后请检查本项目是否发布兼容版本。
-- 这是临时社区修复，使用阅读器私有接口；官方修复后建议停用。
-- 多行参考文献以首行为准。对文字无法识别、旋转或不支持的排版，保留已校正的链接锚点；绘制异常时回退原生预览。
-- 插件不修改 PDF、批注、文库数据库或 Zotero 程序文件。预览处理在本地完成；Zotero 的插件更新机制会访问 GitHub 更新清单。
-- 在插件管理器停用或卸载，再重启 Zotero即可撤销。
-
-### 反馈
-
-请到 [Issues](https://github.com/Suwueng/zotero-reference-marker-fix/issues) 提供 Zotero 版本、操作系统、插件版本、引用位置，以及可公开访问的示例 PDF 链接或 DOI。截图中请保留引用与目标条目的关系。
-
-## English
-
-Zotero's internal-link preview trims the page margins before drawing the destination marker. In the affected implementation, the dot coordinates are not translated to the cropped canvas, so the marker shifts down and to the right.
-
-This plugin:
-
-- Corrects the crop-coordinate offset.
-- Places the dot left of a nearby matching text line and centers it on the visible letter body, excluding sparse punctuation tails.
-- Preserves the full-page preview and falls back to the native renderer if the replacement fails.
+- Corrects the marker offset caused by trimming the page margins.
+- Places the dot to the left of the reference's first line, centered on the visible letter body rather than the font box or punctuation tails.
+- Preserves the full-page popup and falls back to the native renderer if the replacement fails.
 - Restores the original method when disabled.
 
-Install the `.xpi` from [Releases](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest) through **Tools → Plugins → gear → Install Plugin From File**, then restart Zotero. Only Zotero **10.0.5** is supported; interactive use has been confirmed on macOS. Windows and Linux are unverified.
+## Installation and upgrades
 
-The alignment is a local geometric heuristic, not bibliographic identification. Multi-line references align to the first line. Unsupported text layouts retain the corrected destination anchor. This is a community workaround, not an official Zotero release.
+1. Download the `.xpi` file from [Releases](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest). The automatically generated Source code archives are not installable plugins.
+2. In Zotero, open **Tools → Plugins → gear → Install Plugin From File**.
+3. Select the `.xpi` file and restart Zotero after installation.
+4. Open a PDF and hover over an in-text citation.
+
+Formerly **PDF Preview Dot Fix**. The internal add-on ID is unchanged, so installing the new version upgrades the existing installation. Early local versions 0.1.0–0.1.5 used a placeholder update URL and require one manual upgrade to a public release. Version 0.1.6 onward uses this repository's update manifest.
+
+## Compatibility and removal
+
+- **Zotero 10.0.5 only.** Interactive use has been confirmed on macOS; Windows and Linux are unverified. Check for a compatible plugin release when upgrading Zotero.
+- This temporary community workaround uses private reader APIs. Disable it once an official fix is available.
+- Alignment uses a local geometric heuristic. Multi-line references align to the first line. Unrecognized text, rotated pages and unsupported layouts retain the corrected destination anchor.
+- The plugin does not modify PDFs, annotations, the library database or Zotero's program files. Preview processing is local; Zotero's plugin updater accesses the GitHub update manifest.
+- To remove the workaround, disable or uninstall it in the plugin manager and restart Zotero.
+
+## Reporting issues
+
+Open an [issue](https://github.com/Suwueng/zotero-reference-marker-fix/issues) with your Zotero version, operating system, plugin version, citation location and a publicly accessible example PDF link or DOI. Screenshots should show the relationship between the citation and its target reference.
 
 ## Background
+
+Zotero's internal-link preview trims the page margins before drawing the destination marker. In the affected implementation, the dot coordinates are not translated to the cropped canvas, so the marker shifts down and to the right.
 
 - [Earlier report: Highlights of cited paper on consistently wrong place](https://forums.zotero.org/discussion/118062/highlights-of-cited-paper-on-consistently-wrong-place) — similar symptoms; the cause of that earlier report has not been confirmed.
 - [Technical diagnosis](docs/diagnosis.md) — crop-coordinate bug and the separate visual-alignment enhancement.
@@ -64,11 +54,9 @@ The XPI is written to `dist/`. `updates.json` contains the release URL, exact co
 
 Tests cover crop offsets, zoom, rotation fallback, text-line selection, punctuation tails, startup/shutdown, version gating and preservation of subsequent patches. The rendering code was also exercised with a real PDF reader during development; automated tests use synthetic fixtures and do not start Zotero or open a browser.
 
-## Contributions / 贡献说明
+## Contributions
 
 This plugin was developed by Suwueng with assistance from OpenAI’s Codex. Codex assisted with investigating the coordinate mismatch, implementing the temporary fix and visual alignment, writing and running tests, and preparing the release. Suwueng reported the issue, guided the behavior and naming, tested the plugin in daily Zotero use, and confirmed the final visual result.
-
-本插件由 Suwueng 在 OpenAI Codex 的协助下开发。Codex 协助完成坐标错位分析、临时修复与视觉对齐实现、测试编写与执行，以及发布准备。Suwueng 提出问题、确定功能和命名方向，在日常 Zotero 使用中测试插件，并确认最终显示效果。
 
 ## License and attribution
 
