@@ -6,6 +6,16 @@
 
 [下载最新版](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest)
 
+## 修复前后对比
+
+示例中的 **W22** 指向 **Wells & Norman (2022), ApJ, 932, 71**。原生浮窗中的红点偏到了其他条目附近；修复后，红点位于目标参考文献左侧。
+
+| Zotero 原生效果 | 使用 Reference Marker Fix 后 |
+| --- | --- |
+| [![修复前：引用悬停浮窗中的红点偏离目标参考文献](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png) | [![修复后：红点对齐 Wells 与 Norman（2022）条目](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png) |
+
+点击图片可查看原图。右图同时包含裁剪坐标修正与额外的视觉对齐改进。这两张截图也用于作者在 Zotero 官方论坛的反馈。
+
 ## 功能
 
 - 修正裁掉页边空白后产生的红点坐标偏移。

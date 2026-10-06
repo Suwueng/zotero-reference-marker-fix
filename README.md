@@ -6,6 +6,16 @@ A temporary community plugin for **Zotero 10.0.5** that corrects misplaced refer
 
 [Download the latest release](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest)
 
+## Before and after
+
+In this example, **W22** refers to **Wells & Norman (2022), ApJ, 932, 71**. The original marker appears near a different entry; the workaround places it beside the intended reference.
+
+| Original Zotero behavior | With Reference Marker Fix |
+| --- | --- |
+| [![Citation hover popup before the fix: the marker is displaced from the target reference](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png) | [![Citation hover popup after the fix: the marker is aligned beside Wells and Norman (2022)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png)](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png) |
+
+Click either screenshot to view it at full size. The after screenshot includes both the crop-coordinate correction and the additional visual alignment. These are the screenshots used in the author's Zotero forum feedback.
+
 ## Features
 
 - Corrects the marker offset caused by trimming the page margins.
