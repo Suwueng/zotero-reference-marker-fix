@@ -149,7 +149,7 @@ async function fixedRenderPreviewPage(position) {
           radius = aligned.radius;
         }
       } catch (error) {
-        console.warn('[Preview Dot Fix] Text alignment unavailable:', error);
+        console.warn('[Reference Marker Fix] Text alignment unavailable:', error);
       }
       centerX = Math.max(radius, Math.min(canvas2.width - radius, centerX));
       centerY = Math.max(radius, Math.min(canvas2.height - radius, centerY));
@@ -203,7 +203,7 @@ function scanReaders() {
         if (!source.includes('let centerX = (rect[0] + rect[2]) / 2;') ||
             !source.includes('this._trimCanvas(canvas, ctx, 15)') ||
             !source.includes('ctx.arc(centerX, centerY, 7')) {
-          Zotero.debug('[Preview Dot Fix] Skipped an unrecognized renderer.');
+          Zotero.debug('[Reference Marker Fix] Skipped an unrecognized renderer.');
           continue;
         }
         // Create the function in the reader realm, so PDF.js objects retain their methods.
@@ -217,14 +217,14 @@ function scanReaders() {
             try {
               return await fixedRenderPreviewPage.call(this, position);
             } catch (error) {
-              console.error('[Preview Dot Fix] Falling back to native preview:', error);
+              console.error('[Reference Marker Fix] Falling back to native preview:', error);
               return original.call(this, position);
             }
           };
         `)(original);
         proto.renderPreviewPage = replacement;
         patches.set(proto, { original, replacement });
-        Zotero.debug('[Preview Dot Fix] Patched PDF preview renderer.');
+        Zotero.debug('[Reference Marker Fix] Patched PDF preview renderer.');
       }
     } catch (error) {
       Zotero.logError(error);
@@ -249,7 +249,7 @@ function scanReaders() {
 
 function startup() {
   if (Zotero.version !== '10.0.5') {
-    Zotero.debug('[Preview Dot Fix] This build targets Zotero 10.0.5 only.');
+    Zotero.debug('[Reference Marker Fix] This build targets Zotero 10.0.5 only.');
     return;
   }
   active = true;

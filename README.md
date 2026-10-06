@@ -1,8 +1,10 @@
-# Zotero PDF Preview Dot Fix
+# Reference Marker Fix
 
 A temporary community plugin for **Zotero 10.0.5** that fixes the displaced red dot in PDF internal-link previews and aligns it with the target reference's first line.
 
-[下载最新版 / Download latest release](https://github.com/Suwueng/zotero-pdf-preview-dot-fix/releases/latest)
+[下载最新版 / Download latest release](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest)
+
+Formerly **PDF Preview Dot Fix**. The internal add-on ID is unchanged, so the new version upgrades the existing installation.
 
 ## 中文
 
@@ -10,12 +12,12 @@ A temporary community plugin for **Zotero 10.0.5** that fixes the displaced red 
 
 ### 安装
 
-1. 在 [Releases](https://github.com/Suwueng/zotero-pdf-preview-dot-fix/releases/latest) 下载 `.xpi` 文件。不要下载 GitHub 自动生成的 Source code 压缩包来安装。
+1. 在 [Releases](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest) 下载 `.xpi` 文件。不要下载 GitHub 自动生成的 Source code 压缩包来安装。
 2. 打开 Zotero → 工具 → 插件 → 齿轮 → 从文件安装插件。
 3. 选择 `.xpi`，完成后重启 Zotero。
 4. 打开 PDF，将鼠标停在正文引用上查看效果。
 
-升级覆盖安装即可。早期本地版本 0.1.0–0.1.5 使用占位更新地址，需要手动安装一次公开版本；0.1.6 起配置了本仓库的更新清单。
+原名 PDF Preview Dot Fix，现已更名为 Reference Marker Fix。内部插件 ID 保持不变，升级覆盖安装即可。早期本地版本 0.1.0–0.1.5 使用占位更新地址，需要手动安装一次公开版本；0.1.6 起配置了本仓库的更新清单。
 
 ### 兼容范围与撤销
 
@@ -27,7 +29,7 @@ A temporary community plugin for **Zotero 10.0.5** that fixes the displaced red 
 
 ### 反馈
 
-请到 [Issues](https://github.com/Suwueng/zotero-pdf-preview-dot-fix/issues) 提供 Zotero 版本、操作系统、插件版本、引用位置，以及可公开访问的示例 PDF 链接或 DOI。截图中请保留引用与目标条目的关系。
+请到 [Issues](https://github.com/Suwueng/zotero-reference-marker-fix/issues) 提供 Zotero 版本、操作系统、插件版本、引用位置，以及可公开访问的示例 PDF 链接或 DOI。截图中请保留引用与目标条目的关系。
 
 ## English
 
@@ -40,7 +42,7 @@ This plugin:
 - Preserves the full-page preview and falls back to the native renderer if the replacement fails.
 - Restores the original method when disabled.
 
-Install the `.xpi` from [Releases](https://github.com/Suwueng/zotero-pdf-preview-dot-fix/releases/latest) through **Tools → Plugins → gear → Install Plugin From File**, then restart Zotero. Only Zotero **10.0.5** is supported; interactive use has been confirmed on macOS. Windows and Linux are unverified.
+Install the `.xpi` from [Releases](https://github.com/Suwueng/zotero-reference-marker-fix/releases/latest) through **Tools → Plugins → gear → Install Plugin From File**, then restart Zotero. Only Zotero **10.0.5** is supported; interactive use has been confirmed on macOS. Windows and Linux are unverified.
 
 The alignment is a local geometric heuristic, not bibliographic identification. Multi-line references align to the first line. Unsupported text layouts retain the corrected destination anchor. This is a community workaround, not an official Zotero release.
 

@@ -3,8 +3,19 @@
     "pdf-preview-dot-fix@local.invalid": {
       "updates": [
         {
+          "version": "0.1.7",
+          "update_link": "https://github.com/Suwueng/zotero-reference-marker-fix/releases/download/v0.1.7/reference-marker-fix-0.1.7.xpi",
+          "update_hash": "sha256:6f8e075933c91c2b4c44babfb4482a8da9c84dfde110dea08c01b8f53661f596",
+          "applications": {
+            "zotero": {
+              "strict_min_version": "10.0.5",
+              "strict_max_version": "10.0.5"
+            }
+          }
+        },
+        {
           "version": "0.1.6",
-          "update_link": "https://github.com/Suwueng/zotero-pdf-preview-dot-fix/releases/download/v0.1.6/pdf-preview-dot-fix-0.1.6.xpi",
+          "update_link": "https://github.com/Suwueng/zotero-reference-marker-fix/releases/download/v0.1.6/pdf-preview-dot-fix-0.1.6.xpi",
           "update_hash": "sha256:b37264b4b25c6ef91dd0d6dd1b5c34d592a69eef7385fee0190362b5dee86904",
           "applications": {
             "zotero": {
