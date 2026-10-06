@@ -8,26 +8,13 @@ A temporary community plugin for **Zotero 10.0.5** that corrects misplaced refer
 
 ## Before and after
 
-In this example, **W22** refers to **Wells & Norman (2022), ApJ, 932, 71**. The original marker appears near a different entry; the workaround places it beside the intended reference.
-
-| Original Zotero behavior | With Reference Marker Fix |
-| --- | --- |
-| [![Citation hover popup before the fix: the marker is displaced from the target reference](docs/images/reference-marker-before.png)](docs/images/reference-marker-before.png) | [![Citation hover popup after the fix: the marker is aligned beside Wells and Norman (2022)](docs/images/reference-marker-after.png)](docs/images/reference-marker-after.png) |
-
-These crops show the same nearby entries from the forum screenshots. The after image includes both the crop-coordinate correction and visual alignment; the screenshot content has only been cropped.
-
-<details>
-<summary>View the full original screenshots</summary>
-
 **Before**
 
-![Full screenshot before the fix](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png)
+![Before: the reference marker points to the wrong entry](docs/images/reference-marker-before.png)
 
 **After**
 
-![Full screenshot with the workaround](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png)
-
-</details>
+![After: the marker aligns with the target reference](docs/images/reference-marker-after.png)
 
 ## Features
 
@@ -42,8 +29,6 @@ These crops show the same nearby entries from the forum screenshots. The after i
 2. In Zotero, open **Tools → Plugins → gear → Install Plugin From File**.
 3. Select the `.xpi` file and restart Zotero after installation.
 4. Open a PDF and hover over an in-text citation.
-
-Formerly **PDF Preview Dot Fix**. The internal add-on ID is unchanged, so installing the new version upgrades the existing installation. Early local versions 0.1.0–0.1.5 used a placeholder update URL and require one manual upgrade to a public release. Version 0.1.6 onward uses this repository's update manifest.
 
 ## Compatibility and removal
 

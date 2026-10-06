@@ -8,26 +8,13 @@
 
 ## 修复前后对比
 
-示例中的 **W22** 指向 **Wells & Norman (2022), ApJ, 932, 71**。原生浮窗中的红点偏到了其他条目附近；修复后，红点位于目标参考文献左侧。
-
-| Zotero 原生效果 | 使用 Reference Marker Fix 后 |
-| --- | --- |
-| [![修复前：引用悬停浮窗中的红点偏离目标参考文献](docs/images/reference-marker-before.png)](docs/images/reference-marker-before.png) | [![修复后：红点对齐 Wells 与 Norman（2022）条目](docs/images/reference-marker-after.png)](docs/images/reference-marker-after.png) |
-
-以上从论坛反馈截图中裁出同一组相邻条目，突出红点位置变化。右图包含坐标修正与视觉对齐改进；截图内容仅作裁剪。
-
-<details>
-<summary>展开查看完整原始截图</summary>
-
 **修复前**
 
-![修复前完整截图](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/cxfzkrh5kg7q9ln4mkgs.png)
+![修复前：红点偏离目标参考文献](docs/images/reference-marker-before.png)
 
 **修复后**
 
-![修复后完整截图](https://s3.amazonaws.com/zotero.org/images/forums/u10691190/oxt6qoma83ego0b0di9d.png)
-
-</details>
+![修复后：红点与目标参考文献对齐](docs/images/reference-marker-after.png)
 
 ## 功能
 
@@ -42,8 +29,6 @@
 2. 打开 Zotero → **工具 → 插件 → 齿轮 → 从文件安装插件**。
 3. 选择 `.xpi` 文件，安装完成后重启 Zotero。
 4. 打开 PDF，将鼠标停在正文引用上查看效果。
-
-插件原名 **PDF Preview Dot Fix**。内部插件 ID 保持不变，安装新版即可覆盖升级。早期本地版本 0.1.0–0.1.5 使用占位更新地址，需要手动安装一次公开版本；0.1.6 起使用本仓库的更新清单。
 
 ## 兼容范围与撤销
 
