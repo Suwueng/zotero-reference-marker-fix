@@ -3,6 +3,17 @@
     "pdf-preview-dot-fix@local.invalid": {
       "updates": [
         {
+          "version": "0.1.8",
+          "update_link": "https://github.com/Suwueng/zotero-reference-marker-fix/releases/download/v0.1.8/reference-marker-fix-0.1.8.xpi",
+          "update_hash": "sha256:5fc1453ce26aa66e683bdc133e86591dbfd640eacd20a2cfe7434b5d08659cb6",
+          "applications": {
+            "zotero": {
+              "strict_min_version": "10.0.5",
+              "strict_max_version": "10.0.6"
+            }
+          }
+        },
+        {
           "version": "0.1.7",
           "update_link": "https://github.com/Suwueng/zotero-reference-marker-fix/releases/download/v0.1.7/reference-marker-fix-0.1.7.xpi",
           "update_hash": "sha256:6f8e075933c91c2b4c44babfb4482a8da9c84dfde110dea08c01b8f53661f596",
