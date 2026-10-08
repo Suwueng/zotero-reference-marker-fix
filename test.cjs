@@ -99,6 +99,21 @@ async function check(rect, options, expected) {
   assert.ok(cancelled);
   context.Zotero.version = '10.0.6';
   context.startup();
+  assert.notEqual(proto.renderPreviewPage, original);
+  context.shutdown();
   assert.equal(proto.renderPreviewPage, original);
+  // Even on a supported version, do not replace an unknown/native-fixed renderer.
+  const unknown = function () {};
+  const unknownProto = { renderPreviewPage: unknown };
+  reader._internalReader._primaryView._pdfRenderer = Object.create(unknownProto);
+  context.startup();
+  assert.equal(unknownProto.renderPreviewPage, unknown);
+  context.shutdown();
+  reader._internalReader._primaryView._pdfRenderer = Object.create(proto);
+  for (const version of ['10.0.4', '10.0.7', '11.0']) {
+    context.Zotero.version = version;
+    context.startup();
+    assert.equal(proto.renderPreviewPage, original);
+  }
   console.log('PASS: rendering, text alignment, lifecycle, version and conflict checks');
 })();

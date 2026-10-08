@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Rendering method adapted from Zotero Reader (Corporation for Digital Scholarship).
 // https://github.com/zotero/reader/blob/master/src/pdf/pdf-renderer.js
-// Temporary correction for Zotero 10.0.5.
+// Temporary correction for Zotero 10.0.5–10.0.6.
 
 let timer;
 let active = false;
@@ -248,8 +248,8 @@ function scanReaders() {
 }
 
 function startup() {
-  if (Zotero.version !== '10.0.5') {
-    Zotero.debug('[Reference Marker Fix] This build targets Zotero 10.0.5 only.');
+  if (!['10.0.5', '10.0.6'].includes(Zotero.version)) {
+    Zotero.debug('[Reference Marker Fix] This build targets Zotero 10.0.5–10.0.6.');
     return;
   }
   active = true;

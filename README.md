@@ -31,7 +31,7 @@ A temporary community plugin for **Zotero** that corrects misplaced reference ma
 
 ## Compatibility and removal
 
-- Tested on **Zotero 10.0.5 for macOS**. The current package restricts installation and activation to 10.0.5; compatibility with other versions, Windows and Linux has not been verified.
+- Tested on **Zotero 10.0.5 for macOS**. Also compatible with **10.0.6**: its bundled reader code is identical to 10.0.5, and regression tests pass. The current package supports 10.0.5–10.0.6; other versions, Windows and Linux have not been verified.
 - This temporary community workaround uses private reader APIs. Disable it once an official fix is available.
 - Alignment uses a local geometric heuristic. Multi-line references align to the first line. Unrecognized text, rotated pages and unsupported layouts retain the corrected destination anchor.
 - The plugin does not modify PDFs, annotations, the library database or Zotero's program files. Preview processing is local; Zotero's plugin updater accesses the GitHub update manifest.
